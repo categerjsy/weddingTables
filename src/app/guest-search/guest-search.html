@@ -1,0 +1,13 @@
+<form [formGroup]="guestForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <h5>Γράψε το όνομα σου για να βρούμε το τραπέζι σου:</h5>
+        <input type="text" placeholder="Γράψε το όνομά σου" formControlName="name" />
+        @if(guestForm.get('name')?.invalid && guestForm.get('name')?.touched){
+        <div class="error">
+            Παρακαλώ συμπλήρωσε το όνομά σου
+        </div>
+         }
+    </div>
+
+    <button type="submit" [disabled]="guestForm.invalid">Βρες το τραπέζι σου</button>
+</form>
