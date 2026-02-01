@@ -1,4 +1,14 @@
+@if(table){
 <div class="main-label">
     <span class="label-text">Το τραπέζι σου είναι το:</span>
-    <span class="table-number">4</span>
+    <span class="table-number">{{ table.tableNumber }}</span>
+    <div class="guest-list">
+        <p class="guest-list-title">Επίσης μαζί σου κάθονται:</p>
+        <ul>
+            @for(guest of table.guests; track guest){
+            <li>{{ guest }}</li>
+            }
+        </ul>
+    </div>
 </div>
+}

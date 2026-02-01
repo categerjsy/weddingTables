@@ -1,7 +1,10 @@
 <body>
 
-<app-header></app-header>
-<app-guest-search></app-guest-search>
-<app-your-table></app-your-table>
+  <app-header></app-header>
 
+  <app-guest-search (tableFound)="onTableFound($event)"></app-guest-search>
+
+  @if(selectedTable){
+  <app-your-table [table]="selectedTable"></app-your-table>
+  }
 </body>

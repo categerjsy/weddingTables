@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, signal } from '@angular/core';
+import { Table } from '../interfaces/table';
 
 @Component({
   selector: 'app-your-table',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './your-table.scss',
 })
 export class YourTable {
+  @Input() table: Table | null = null;
 
 }

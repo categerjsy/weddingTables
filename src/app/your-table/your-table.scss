@@ -1,28 +1,69 @@
 .main-label {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 1.5rem 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #ffffffcc, #f0f0f0cc);
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
     max-width: 500px;
     width: 90%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-label:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
 }
 
 .label-text,
 .table-number {
-    font-size: 1rem;
     font-weight: 700;
     margin: 0;
 }
 
 .label-text {
-    color: #363a38;
+    font-size: 1.2rem;
+    color: #2c2f33;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.table-number {
-    color: #ff4d4d;
+.guest-list {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+.guest-list-title {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: #333;
+}
+
+.guest-list ul {
+    list-style: disc inside;
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.guest-list li {
+    background-color: #f5f5f5;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 0.2rem;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.guest-list li:hover {
+    background-color: #e0e0e0;
+}
+
+:host {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: #B9F8CF;
 }
